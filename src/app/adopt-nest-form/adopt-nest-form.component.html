@@ -1,0 +1,15 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Adopt a Nest" class="h1 text-center"></Label>
+    <Label text="By adopting a sea turtle nest, you're directly contributing to the protection and conservation of these amazing creatures." class="body text-center" textWrap="true"></Label>
+    
+    <TextField [(ngModel)]="name" hint="Your Name" class="input input-border m-t-20"></TextField>
+    <TextField [(ngModel)]="email" hint="Email" keyboardType="email" class="input input-border m-t-10"></TextField>
+    
+    <ListPicker [items]="adoptionLevels" [(ngModel)]="selectedLevel" class="m-t-10"></ListPicker>
+    
+    <TextField [(ngModel)]="nestName" hint="Name your nest (optional)" class="input input-border m-t-10"></TextField>
+    
+    <Button text="Adopt Now" class="btn btn-primary m-t-20" (tap)="onAdopt()"></Button>
+  </StackLayout>
+</ScrollView>

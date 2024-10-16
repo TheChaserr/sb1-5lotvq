@@ -1,0 +1,84 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+.fa {
+  font-family: "FontAwesome";
+}
+
+.sidedrawer-header {
+  height: 100;
+  background-color: #3c8dbc;
+}
+
+.sidedrawer-header-image {
+  height: 60;
+  width: 60;
+  border-radius: 30;
+  margin: 10 0 10 20;
+}
+
+.sidedrawer-header-brand {
+  color: #fff;
+  font-size: 18;
+  margin-left: 20;
+}
+
+.sidedrawer-content {
+  background-color: #fff;
+}
+
+.sidedrawer-list-item {
+  padding: 10 15;
+}
+
+.sidedrawer-list-item Label {
+  vertical-align: center;
+}
+
+.sidedrawer-list-item.selected {
+  background-color: #f1f1f1;
+}
+
+.logo {
+  width: 150;
+  height: 150;
+  margin-bottom: 20;
+}
+
+.action-bar {
+  background-color: #3c8dbc;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #3c8dbc;
+  border-color: #3c8dbc;
+}
+
+.h1 {
+  font-size: 32;
+  font-weight: bold;
+  margin-bottom: 20;
+}
+
+.h2 {
+  font-size: 24;
+  font-weight: bold;
+  margin-bottom: 10;
+}
+
+.h3 {
+  font-size: 18;
+  font-weight: bold;
+  margin-bottom: 5;
+}
+
+.body {
+  font-size: 14;
+}
+
+.list-group-item {
+  padding: 10 0;
+  border-bottom-width: 1;
+  border-bottom-color: #e0e0e0;
+}

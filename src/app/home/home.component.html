@@ -1,0 +1,19 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Image src="res://logo" class="logo"></Image>
+    <Label text="Welcome to Oki Sea Turtle" class="h1 text-center"></Label>
+    <Label text="Our Mission" class="h2 m-t-30 m-b-10"></Label>
+    <Label text="Oki Sea Turtle is dedicated to the conservation and protection of sea turtles and their habitats through research, education, and community engagement." class="body m-b-20" textWrap="true"></Label>
+    <Label text="Latest Updates" class="h2 m-t-30 m-b-10"></Label>
+    <ListView [items]="latestUpdates" class="list-group">
+      <ng-template let-item="item">
+        <StackLayout class="list-group-item">
+          <Label [text]="item.title" class="h3"></Label>
+          <Label [text]="item.date" class="footnote text-muted"></Label>
+          <Label [text]="item.description" class="body" textWrap="true"></Label>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+    <Button text="Learn More" class="btn btn-primary m-t-20" (tap)="onLearnMoreTap()"></Button>
+  </StackLayout>
+</ScrollView>

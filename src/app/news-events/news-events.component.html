@@ -1,0 +1,16 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="News & Events" class="h1 text-center"></Label>
+    
+    <ListView [items]="newsAndEvents" class="list-group">
+      <ng-template let-item="item">
+        <StackLayout class="list-group-item">
+          <Label [text]="item.title" class="h3"></Label>
+          <Label [text]="item.date" class="footnote text-muted"></Label>
+          <Label [text]="item.description" class="body" textWrap="true"></Label>
+          <Button *ngIf="item.type === 'event'" text="RSVP" class="btn btn-primary btn-rounded btn-sm m-t-10" (tap)="onRSVP(item)"></Button>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</ScrollView>

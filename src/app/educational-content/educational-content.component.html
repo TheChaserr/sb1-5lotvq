@@ -1,0 +1,15 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Sea Turtle Education" class="h1 text-center"></Label>
+    
+    <ListView [items]="educationalContent" class="list-group">
+      <ng-template let-item="item">
+        <StackLayout class="list-group-item">
+          <Label [text]="item.title" class="h3"></Label>
+          <Label [text]="item.description" class="body" textWrap="true"></Label>
+          <Button text="Learn More" class="btn btn-primary btn-rounded btn-sm m-t-10" (tap)="onLearnMore(item)"></Button>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</ScrollView>

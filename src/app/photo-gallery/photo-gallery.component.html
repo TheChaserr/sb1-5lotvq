@@ -1,0 +1,9 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Photo Gallery" class="h1 text-center"></Label>
+    
+    <WrapLayout>
+      <Image *ngFor="let photo of photos" [src]="photo.url" stretch="aspectFill" width="45%" class="m-5" (tap)="onPhotoTap(photo)"></Image>
+    </WrapLayout>
+  </StackLayout>
+</ScrollView>

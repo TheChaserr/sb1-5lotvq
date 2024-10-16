@@ -1,0 +1,21 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Volunteer Opportunities" class="h1 text-center"></Label>
+    <Label text="Join us in our mission to protect sea turtles! Check out our volunteer opportunities below." class="body text-center" textWrap="true"></Label>
+    
+    <ListView [items]="volunteerOpportunities" class="list-group m-t-20">
+      <ng-template let-opportunity="item">
+        <StackLayout class="list-group-item">
+          <Label [text]="opportunity.title" class="h3"></Label>
+          <Label [text]="opportunity.description" class="body" textWrap="true"></Label>
+          <Button text="Sign Up" class="btn btn-primary btn-rounded btn-sm m-t-10" (tap)="onSignUp(opportunity)"></Button>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+    
+    <StackLayout class="m-t-20">
+      <Label text="Can't find a suitable opportunity? Let us know how you'd like to help!" class="body text-center" textWrap="true"></Label>
+      <Button text="Contact Us" class="btn btn-outline m-t-10" (tap)="onContactUs()"></Button>
+    </StackLayout>
+  </StackLayout>
+</ScrollView>

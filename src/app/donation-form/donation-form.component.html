@@ -1,0 +1,15 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Support Our Cause" class="h1 text-center"></Label>
+    <Label text="Your donation helps us protect sea turtles and their habitats. Thank you for your support!" class="body text-center" textWrap="true"></Label>
+    
+    <TextField [(ngModel)]="amount" hint="Donation Amount" keyboardType="number" class="input input-border m-t-20"></TextField>
+    
+    <ListPicker [items]="frequencies" [(ngModel)]="selectedFrequency" class="m-t-10"></ListPicker>
+    
+    <TextField [(ngModel)]="name" hint="Full Name" class="input input-border m-t-10"></TextField>
+    <TextField [(ngModel)]="email" hint="Email" keyboardType="email" class="input input-border m-t-10"></TextField>
+    
+    <Button text="Donate Now" class="btn btn-primary m-t-20" (tap)="onDonate()"></Button>
+  </StackLayout>
+</ScrollView>

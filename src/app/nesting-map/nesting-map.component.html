@@ -1,0 +1,23 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Nesting Sites Map" class="h1 text-center"></Label>
+    <Label text="Explore sea turtle nesting sites and conservation areas." class="body text-center" textWrap="true"></Label>
+    
+    <!-- Placeholder for the map -->
+    <ContentView height="300" class="m-t-20">
+      <Label text="Map will be displayed here" class="text-center" verticalAlignment="center"></Label>
+    </ContentView>
+    
+    <ListView [items]="nestingSites" class="list-group m-t-20">
+      <ng-template let-site="item">
+        <GridLayout columns="auto, *" class="list-group-item">
+          <Label col="0" text="&#xf3c5;" class="fa text-primary m-r-10"></Label>
+          <StackLayout col="1">
+            <Label [text]="site.name" class="h3"></Label>
+            <Label [text]="site.description" class="body" textWrap="true"></Label>
+          </StackLayout>
+        </GridLayout>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</ScrollView>

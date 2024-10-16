@@ -1,0 +1,13 @@
+<ScrollView>
+  <StackLayout class="p-20">
+    <Label text="Contact Us" class="h1 text-center"></Label>
+    <Label text="We'd love to hear from you! Fill out the form below to get in touch." class="body text-center" textWrap="true"></Label>
+    
+    <TextField [(ngModel)]="name" hint="Name" class="input input-border m-t-10"></TextField>
+    <TextField [(ngModel)]="email" hint="Email" keyboardType="email" class="input input-border m-t-10"></TextField>
+    <TextField [(ngModel)]="subject" hint="Subject" class="input input-border m-t-10"></TextField>
+    <TextView [(ngModel)]="message" hint="Message" rows="5" class="input input-border m-t-10"></TextView>
+    
+    <Button text="Send Message" class="btn btn-primary m-t-20" (tap)="onSendMessage()"></Button>
+  </StackLayout>
+</ScrollView>

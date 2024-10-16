@@ -1,0 +1,66 @@
+<GridLayout rows="auto, *">
+  <ActionBar title="Oki Sea Turtle" class="action-bar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <ActionItem icon="res://menu" (tap)="onDrawerButtonTap()" ios.position="left"></ActionItem>
+  </ActionBar>
+
+  <RadSideDrawer>
+    <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
+      <StackLayout row="0" class="sidedrawer-header">
+        <Image src="res://logo" class="sidedrawer-header-image"></Image>
+        <Label text="Oki Sea Turtle" class="sidedrawer-header-brand"></Label>
+      </StackLayout>
+
+      <ScrollView row="1">
+        <StackLayout class="sidedrawer-content">
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+            <Label col="0" text="&#xf015;" class="fa"></Label>
+            <Label col="1" text="Home" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/contact')" (tap)="onNavItemTap('/contact')">
+            <Label col="0" text="&#xf0e0;" class="fa"></Label>
+            <Label col="1" text="Contact" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/donate')" (tap)="onNavItemTap('/donate')">
+            <Label col="0" text="&#xf004;" class="fa"></Label>
+            <Label col="1" text="Donate" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/adopt-nest')" (tap)="onNavItemTap('/adopt-nest')">
+            <Label col="0" text="&#xf1b0;" class="fa"></Label>
+            <Label col="1" text="Adopt a Nest" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/news-events')" (tap)="onNavItemTap('/news-events')">
+            <Label col="0" text="&#xf1ea;" class="fa"></Label>
+            <Label col="1" text="News & Events" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/education')" (tap)="onNavItemTap('/education')">
+            <Label col="0" text="&#xf19d;" class="fa"></Label>
+            <Label col="1" text="Education" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/gallery')" (tap)="onNavItemTap('/gallery')">
+            <Label col="0" text="&#xf03e;" class="fa"></Label>
+            <Label col="1" text="Photo Gallery" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/nesting-map')" (tap)="onNavItemTap('/nesting-map')">
+            <Label col="0" text="&#xf279;" class="fa"></Label>
+            <Label col="1" text="Nesting Map" class="p-r-10"></Label>
+          </GridLayout>
+
+          <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/volunteer')" (tap)="onNavItemTap('/volunteer')">
+            <Label col="0" text="&#xf0c0;" class="fa"></Label>
+            <Label col="1" text="Volunteer" class="p-r-10"></Label>
+          </GridLayout>
+        </StackLayout>
+      </ScrollView>
+    </GridLayout>
+
+    <page-router-outlet tkMainContent class="page page-content"></page-router-outlet>
+  </RadSideDrawer>
+</GridLayout>
